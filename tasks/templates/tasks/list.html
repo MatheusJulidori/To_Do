@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de tarefas</title>
+
+    <style>
+        #container{
+            width: 800px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: antiquewhite;
+        }
+        #titulo{
+            border: 2px solid red;
+        }
+
+        #titulo h2{
+            text-align: center;
+        }
+        #lista ul{
+            list-style: none;
+            margin: 5px;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>To-Do</h2>
+    </header>
+
+    <section id="container">
+        <div id="titulo"><h2>Lista de tarefas</h2></div>
+        <div id="lista">
+            <ul>
+                <li>
+                    <label onclick="taskchecker('task-1-input','task-1-text')"><input type="checkbox" id="task-1-input"><span id="task-1-text">Lorem Ipsum</span></label>
+                </li>
+                <li>
+                    <label onclick="taskchecker('task-2-input','task-2-text')"><input type="checkbox" id="task-2-input"><span id="task-2-text">Lorem Ipsum</span></label>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function taskchecker(InputID,TextID) {
+            if(document.getElementById(InputID).checked === true){
+                document.getElementById(TextID).style.textDecoration = 'line-through'
+            }
+            else{
+                document.getElementById(TextID).style.textDecoration = 'none'
+            }
+        }
+    </script>
+
+</body>
+</html>
